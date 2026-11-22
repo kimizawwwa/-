@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b5ba3">
+    <title>Средиземное море — MSC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-nav">
+        <nav class="navbar navbar-expand-lg nav-shell" aria-label="Главная навигация">
+            <div class="container-fluid px-0"><a class="navbar-brand" href="index.html"
+                    aria-label="MSC — на главную"><img class="brand-logo" src="logo.png" alt="Логотип MSC"
+                        onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="brand-fallback"
+                        hidden>MSC</span></a><button class="navbar-toggler border-0 shadow-none" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto my-3 my-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="routes.html"
+                                aria-current="page">Маршруты</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">Как это работает</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#reviews">Отзывы</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profile.html">Личный профиль</a></li>
+                    </ul><a class="btn btn-cta" href="order.html">Подобрать круиз</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <section class="interior-hero"
+            style="background-image:linear-gradient(90deg,rgba(4,23,42,.86),rgba(4,23,42,.30)),url('images/mediterranean.jpg')">
+            <div class="container">
+                <div class="eyebrow">MSC · 7 ночей</div>
+                <h1>Средиземное море</h1>
+                <p>Италия · Франция · Испания. Круиз с комфортным темпом, красивыми портами и временем для отдыха на
+                    борту.</p>
+            </div>
+        </section>
+        <section class="page-content">
+            <div class="container">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <div class="route-detail-image" role="img" aria-label="Круизное направление: Средиземное море"
+                            style="background-image:url('images/mediterranean.jpg')"></div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="eyebrow">Ваше путешествие</div>
+                        <h2 class="section-title">Новый город почти каждый день</h2>
+                        <p class="section-description">Просыпайтесь у нового берега, гуляйте по городу и возвращайтесь
+                            на корабль — ваш комфортный отель всегда рядом.</p>
+                        <ul class="port-list">
+                            <li>Барселона</li>
+                            <li>Марсель</li>
+                            <li>Генуя</li>
+                            <li>Неаполь</li>
+                            <li>Валлетта</li>
+                        </ul>
+                        <div class="row g-3 mt-3">
+                            <div class="col-6">
+                                <div class="info-card"><small>Длительность</small><strong>7 ночей</strong></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="info-card"><small>Порт отправления</small><strong>Барселона</strong></div>
+                            </div>
+                        </div><a class="btn btn-cta mt-4" href="order.html?route=mediterranean">Выбрать этот маршрут</a>
+                    </div>
+                </div>
+                <div class="page-panel mt-5">
+                    <div class="eyebrow">Как проходит круиз</div>
+                    <h2 class="section-title">Отправление, море и новые впечатления</h2>
+                    <p class="section-description">Последовательность портов зависит от выбранного рейса. Оставьте
+                        заявку — подберём доступные варианты и расскажем, что включено.</p><a
+                        href="order.html?route=mediterranean" class="btn btn-cta mt-3">Запросить варианты</a>
+                </div><a href="routes.html" class="d-inline-block mt-4">← Все маршруты</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3"><a
+                class="navbar-brand" href="index.html" aria-label="MSC — на главную"><img class="brand-logo"
+                    src="logo.png" alt="Логотип MSC"
+                    onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="brand-fallback"
+                    hidden>MSC</span></a><span>© 2026 MSC · Круизы по миру</span>
+            <div class="footer-links"><a href="routes.html">Маршруты</a><a href="index.html#about">О нас</a><a
+                    href="order.html">Заказ</a><a href="profile.html">Профиль</a></div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>document.querySelectorAll('.navbar-nav .nav-link').forEach(link => link.addEventListener('click', () => { const menu = document.querySelector('#mainNav'); if (menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide(); }));</script>
+</body>
+
+</html>

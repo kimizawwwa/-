@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Подберём круизный маршрут под ваш отдых, бюджет и настроение.">
+  <meta name="theme-color" content="#0b5ba3">
+  <title>MSC — круизы по миру</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <section class="hero" id="home">
+      <nav class="navbar navbar-expand-lg nav-shell" aria-label="Главная навигация">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand" href="index.html" aria-label="MSC — на главную"><img class="brand-logo" src="logo.png"
+              alt="Логотип MSC" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span
+              class="brand-fallback" hidden>MSC</span></a>
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню"><span
+              class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto my-3 my-lg-0">
+              <li class="nav-item"><a class="nav-link" href="routes.html">Маршруты</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">Как это работает</a></li>
+              <li class="nav-item"><a class="nav-link" href="#reviews">Отзывы</a></li>
+              <li class="nav-item"><a class="nav-link" href="profile.html">Личный профиль</a></li>
+            </ul>
+            <a class="btn btn-cta" href="order.html">Подобрать круиз</a>
+          </div>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <div class="hero-copy">
+          <div class="hero-label">Морские путешествия · 2026</div>
+          <h1>Море впечатлений.<span>Один круиз.</span></h1>
+          <p class="hero-lead">Каждое утро — новый город, а каждый вечер — ваш дом плывёт дальше. Найдём путешествие под
+            вас.</p>
+          <div class="hero-action"><a class="btn btn-cta" href="order.html">Подобрать маршрут</a></div>
+          <div class="hero-benefits"><span>Комфорт на борту</span><span>Новые города</span><span>Маршрут под вас</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tours">
+      <div class="container">
+        <div class="row align-items-end gy-3 mb-4 mb-lg-5">
+          <div class="col-lg-6">
+            <div class="eyebrow">Выберите направление</div>
+            <h2 class="section-title">Популярные маршруты</h2>
+          </div>
+          <div class="col-lg-5 offset-lg-1">
+            <p class="section-description">Три идеи для первого путешествия — поможем выбрать даты, корабль и маршрут
+              под ваш ритм.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="route-card">
+              <div class="route-art"><svg viewBox="0 0 500 220" role="img" aria-label="Побережье Средиземного моря"
+                  preserveAspectRatio="xMidYMid slice">
+                  <rect width="500" height="220" fill="#f69a6a" />
+                  <circle cx="405" cy="54" r="34" fill="#ffd18c" />
+                  <path d="M0 142Q92 118 168 143T330 140T500 131V220H0Z" fill="#d77b66" />
+                  <path d="M0 168Q88 143 170 167T335 163T500 156V220H0Z" fill="#f4cc9b" />
+                  <path d="M0 177Q105 157 200 181T390 171T500 173V220H0Z" fill="#31a5b7" />
+                  <path d="M73 117L111 78L150 117Z" fill="#fff7e8" />
+                  <rect x="81" y="115" width="60" height="38" fill="#fff7e8" />
+                  <path d="M85 119L99 106L112 119L126 106L139 119" fill="none" stroke="#e97055" stroke-width="4" />
+                  <rect x="98" y="132" width="11" height="21" fill="#6db9c4" />
+                  <rect x="118" y="132" width="11" height="21" fill="#6db9c4" />
+                  <path d="M284 145H365L351 162H299Z" fill="#fff" />
+                  <path d="M300 144L318 125H345L356 144Z" fill="#f4f7f7" />
+                </svg></div>
+              <div class="route-meta"><span class="route-duration">7 НОЧЕЙ</span>
+                <h3><a class="route-title-link" href="route-mediterranean.html">Средиземное море</a></h3>
+                <p>Италия · Франция · Испания</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="route-card">
+              <div class="route-art"><svg viewBox="0 0 500 220" role="img" aria-label="Белые домики Греческих островов"
+                  preserveAspectRatio="xMidYMid slice">
+                  <rect width="500" height="220" fill="#a9dfea" />
+                  <circle cx="415" cy="50" r="31" fill="#ffe1a3" />
+                  <path d="M0 132Q80 106 164 133T326 130T500 120V220H0Z" fill="#4eb9c6" />
+                  <path d="M0 160Q99 143 185 164T353 157T500 151V220H0Z" fill="#118da9" />
+                  <path d="M45 103H177V156H45Z" fill="#fffdf6" />
+                  <path d="M35 103Q111 54 187 103Z" fill="#fffdf6" />
+                  <path d="M72 99A22 22 0 0 1 116 99Z" fill="#ff783b" />
+                  <rect x="89" y="103" width="18" height="53" fill="#fffdf6" />
+                  <path d="M224 126H351V166H224Z" fill="#fffdf6" />
+                  <path d="M214 126Q287 81 361 126Z" fill="#fffdf6" />
+                  <path d="M254 122A20 20 0 0 1 294 122Z" fill="#ff783b" />
+                  <rect x="265" y="127" width="17" height="39" fill="#fffdf6" />
+                </svg></div>
+              <div class="route-meta"><span class="route-duration">5 НОЧЕЙ</span>
+                <h3><a class="route-title-link" href="route-greek-islands.html">Греческие острова</a></h3>
+                <p>Санторини · Родос · Миконос</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="route-card">
+              <div class="route-art"><svg viewBox="0 0 500 220" role="img"
+                  aria-label="Тропический остров в Карибском море" preserveAspectRatio="xMidYMid slice">
+                  <rect width="500" height="220" fill="#9ddadd" />
+                  <circle cx="405" cy="51" r="34" fill="#ffe095" />
+                  <path d="M0 135Q92 108 174 138T335 128T500 124V220H0Z" fill="#39b8bc" />
+                  <path d="M0 165Q90 146 184 169T358 158T500 153V220H0Z" fill="#0b8298" />
+                  <path d="M0 187Q114 169 225 190T410 181T500 179V220H0Z" fill="#05627d" />
+                  <path d="M343 153Q378 90 409 43" fill="none" stroke="#76563c" stroke-width="9" />
+                  <path d="M408 45Q370 46 354 20Q389 20 408 45Q405 10 439 0Q437 35 408 45Q447 26 471 43Q439 60 408 45"
+                    fill="#19705f" />
+                </svg></div>
+              <div class="route-meta"><span class="route-duration">8 НОЧЕЙ</span>
+                <h3><a class="route-title-link" href="route-caribbean.html">Карибские острова</a></h3>
+                <p>Багамы · Ямайка · Кайманы</p>
+              </div>
+            </article>
+          </div>
+          <section class="trust-strip" aria-label="Преимущества">
+            <div class="container">
+              <div class="row gy-3">
+                <div class="col-md-4">
+                  <div class="trust-item"><span class="trust-icon" aria-hidden="true">⌖</span><span><strong>Подбор под
+                        ваш
+                        бюджет</strong><small>Без сотни вкладок и сложных условий</small></span></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="trust-item"><span class="trust-icon" aria-hidden="true">✦</span><span><strong>Проверенные
+                        маршруты</strong><small>Поможем выбрать каюту и даты</small></span></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="trust-item"><span class="trust-icon" aria-hidden="true">♡</span><span><strong>Поддержка до
+                        поездки</strong><small>Поможем подготовиться и будем на связи</small></span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="about-section" id="about">
+            <div class="container">
+              <div class="row align-items-center g-4 g-lg-5">
+                <div class="col-lg-6">
+                  <div class="about-visual" aria-label="Схема маршрута круиза" role="img">
+                    <div class="route-note"><small>ВАШ МАРШРУТ</small><strong>собран с заботой</strong></div><svg
+                      class="route-map" viewBox="0 0 620 360" aria-hidden="true">
+                      <rect x="8" y="8" width="604" height="344" rx="22" fill="#eaf6fa" />
+                      <path class="map-grid"
+                        d="M20 100H600M20 180H600M20 260H600M120 20V340M220 20V340M320 20V340M420 20V340M520 20V340" />
+                      <path class="map-land"
+                        d="M8 8H612V111L589 122 565 109 544 125 522 110 500 128 479 111 456 128 434 111 412 129 389 111 368 130 346 113 324 131 302 114 280 132 258 114 236 131 214 116 192 132 170 115 148 132 126 114 103 127 80 110 57 121 34 103 8 112Z" />
+                      <path class="map-land"
+                        d="M112 352L110 325 126 305 139 283 160 270 181 278 201 269 221 281 242 270 262 280 282 265 301 278 321 271 340 287 360 279 380 292 402 286 412 310 398 336 374 352Z" />
+                      <path class="map-land"
+                        d="M330 126L348 132 357 149 366 166 378 181 375 197 387 210 382 223 370 218 364 202 354 193 350 177 341 164 337 147Z" />
+                      <path class="map-route med"
+                        d="M150 202C183 184 216 166 246 170S288 176 306 181 334 193 345 211 337 235 321 247 362 249 394 222 428 197 452 205 471 224 479 245" />
+                      <g fill="#ff773b">
+                        <circle class="map-dot" cx="150" cy="202" r="7" />
+                        <circle class="map-dot" cx="246" cy="170" r="7" />
+                        <circle class="map-dot" cx="306" cy="181" r="7" />
+                        <circle class="map-dot" cx="345" cy="211" r="7" />
+                        <circle class="map-dot" cx="321" cy="247" r="7" />
+                        <circle class="map-dot" cx="414" cy="208" r="7" />
+                        <circle class="map-dot" cx="452" cy="205" r="7" />
+                        <circle class="map-dot" cx="479" cy="245" r="7" />
+                      </g>
+                      <text class="map-label" x="84" y="193">Барселона</text><text class="map-label" x="212"
+                        y="151">Марсель</text><text class="map-label" x="286" y="159">Генуя</text><text
+                        class="map-label" x="352" y="207">Неаполь</text><text class="map-label" x="283"
+                        y="270">Валлетта</text><text class="map-label" x="416" y="192">Афины</text><text
+                        class="map-label" x="457" y="230">Миконос</text><text class="map-label" x="483"
+                        y="264">Санторини</text>
+                      <text x="394" y="55" fill="#0b5ba3" font-family="Arial, sans-serif" font-size="11"
+                        font-weight="800" letter-spacing="1.5">СРЕДИЗЕМНОЕ МОРЕ</text>
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="about-copy">
+                    <div class="eyebrow">О нас</div>
+                    <h2 class="section-title">От первого вопроса<br>до трапа корабля</h2>
+                    <p>Делаем круизы понятными: слушаем, что важно именно вам, сравниваем варианты и остаёмся на связи
+                      до
+                      поездки.</p>
+                    <div class="about-point"><span class="check" aria-hidden="true">✓</span><span><strong>Подбираем
+                          по-человечески</strong><small>Темп, бюджет и любимые впечатления — учитываем.</small></span>
+                    </div>
+                    <div class="about-point"><span class="check" aria-hidden="true">✓</span><span><strong>Объясняем
+                          простыми
+                          словами</strong><small>Помогаем заранее понять, что входит в поездку.</small></span></div><a
+                      class="btn btn-cta" href="order.html">Обсудить поездку</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="reviews-section" id="reviews">
+            <div class="container">
+              <div class="eyebrow">Отзывы путешественников</div>
+              <h2 class="section-title">Истории с борта</h2>
+              <article class="review-card">
+                <div class="review-score">
+                  <div class="stars" aria-label="5 из 5">★★★★★</div><strong>Новый взгляд</strong><small>на привычный
+                    отпуск</small>
+                </div>
+                <div>
+                  <blockquote class="review-quote">«За одну поездку увидели столько мест, сколько сами планировали бы
+                    несколько лет. Утром — новый порт, а вечером снова уютная каюта. Всё оказалось проще, чем мы
+                    думали».
+                  </blockquote>
+                  <div class="review-author"><span class="avatar" aria-hidden="true">АМ</span><span><strong>Анна и
+                        Максим</strong><br>круиз по Средиземному морю</span></div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="booking-section" id="booking">
+            <div class="container">
+              <div class="booking">
+                <div class="row align-items-center g-4 g-lg-5">
+                  <div class="col-lg-5">
+                    <div class="eyebrow">Начнём с простого</div>
+                    <h2 class="section-title">Расскажите, куда<br>мечтаете</h2>
+                    <p class="booking-copy">Оставьте номер — обсудим направления и подберём несколько вариантов под вас.
+                    </p>
+                  </div>
+                  <div class="col-lg-7">
+                    <form id="bookingForm" class="row g-3">
+                      <div class="col-md-6"><label class="form-label" for="name">Ваше имя</label><input
+                          class="form-control" id="name" name="name" type="text" placeholder="Как к вам обращаться"
+                          autocomplete="name" required>
+                      </div>
+                      <div class="col-md-6"><label class="form-label" for="phone">Телефон или WhatsApp</label><input
+                          class="form-control" id="phone" name="phone" type="tel" placeholder="+7 ___ ___ __ __"
+                          autocomplete="tel" required></div>
+                      <div class="col-md-7"><label class="form-label" for="destination">Какой маршрут
+                          интересен?</label><select class="form-select" id="destination" name="destination">
+                          <option value="" selected>Пока выбираю</option>
+                          <option>Средиземное море</option>
+                          <option>Греческие острова</option>
+                          <option>Карибские острова</option>
+                          <option>Другой маршрут</option>
+                        </select></div>
+                      <div class="col-md-5 d-flex align-items-end"><button class="btn btn-cta w-100" type="submit">Жду
+                          звонка</button></div>
+                    </form><span class="form-note">Без обязательств — только консультация и варианты.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  </main>
+
+  <footer>
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3"><a
+        class="navbar-brand" href="index.html" aria-label="MSC — на главную"><img class="brand-logo" src="logo.png"
+          alt="Логотип MSC" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="brand-fallback"
+          hidden>MSC</span></a><span>© 2026 MSC · Круизы по миру</span>
+      <div class="footer-links"><a href="routes.html">Маршруты</a><a href="#about">О нас</a><a href="order.html">Заказ</a><a href="profile.html">Профиль</a>
+      </div>
+    </div>
+  </footer>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header"><span class="rounded-circle me-2"
+          style="width:10px;height:10px;background:#ff773b"></span><strong class="me-auto">Спасибо за
+          заявку</strong><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+      <div class="toast-body">Мы скоро свяжемся с вами, чтобы обсудить круиз.</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const bookingForm = document.querySelector('#bookingForm');
+    bookingForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!bookingForm.reportValidity()) return;
+      const request = Object.fromEntries(new FormData(bookingForm).entries());
+      request.createdAt = new Date().toLocaleDateString('ru-RU');
+      const saved = JSON.parse(localStorage.getItem('mscBookings') || '[]');
+      saved.unshift(request);
+      localStorage.setItem('mscBookings', JSON.stringify(saved));
+      bootstrap.Toast.getOrCreateInstance(document.querySelector('#successToast')).show();
+      bookingForm.reset();
+    });
+    document.querySelectorAll('.navbar-nav .nav-link').forEach((link) => link.addEventListener('click', () => {
+      const menu = document.querySelector('#mainNav');
+      if (menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
+    }));
+  </script>
+</body>
+
+</html>
