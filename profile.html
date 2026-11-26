@@ -37,147 +37,173 @@
         </nav>
     </div>
     <main>
-    <section class="interior-hero">
-        <div class="container">
-            <div class="eyebrow">MSC · Ваш кабинет</div>
-            <h1>Личный профиль</h1>
-            <p>Управляйте контактами, настройками приватности и заявками на круизы.</p>
-        </div>
-    </section>
-    <section class="page-content profile-page">
-        <div class="container">
-            <div id="profileDashboard">
-                <section class="profile-account-card" aria-label="Данные аккаунта">
-                    <div class="profile-person">
-                        <div class="profile-avatar" id="profileInitials" aria-hidden="true">KR</div>
-                        <div class="profile-person-copy">
-                            <span class="profile-kicker">ВАШ MSC ПРОФИЛЬ</span>
-                            <h2 id="profileDisplayName">Kami R.R</h2>
-                            <p id="profileDisplayEmail">l.l.vi.britain@gmail.com</p>
-                            <p id="profileDisplayPhone">0998170208</p>
+        <section class="interior-hero">
+            <div class="container">
+                <div class="eyebrow">MSC · Ваш кабинет</div>
+                <h1>Личный профиль</h1>
+                <p>Управляйте контактами, настройками приватности и заявками на круизы.</p>
+            </div>
+        </section>
+        <section class="page-content profile-page">
+            <div class="container">
+                <div id="profileDashboard">
+                    <section class="profile-account-card" aria-label="Данные аккаунта">
+                        <div class="profile-person">
+                            <div class="profile-avatar" id="profileInitials" aria-hidden="true">KR</div>
+                            <div class="profile-person-copy">
+                                <span class="profile-kicker">ВАШ MSC ПРОФИЛЬ</span>
+                                <h2 id="profileDisplayName">Kami R.R</h2>
+                                <p id="profileDisplayEmail">l.l.vi.britain@gmail.com</p>
+                                <p id="profileDisplayPhone">0998170208</p>
+                            </div>
+                        </div>
+                        <div class="profile-account-actions">
+                            <button class="btn profile-edit-button" id="editProfileButton" type="button">Редактировать
+                                аккаунт</button>
+                            <button class="btn profile-logout-button" id="logoutButton" type="button">Выйти из
+                                аккаунта</button>
+                        </div>
+                    </section>
+
+                    <div class="row g-4 mt-1">
+                        <div class="col-lg-5">
+                            <form class="page-panel profile-form profile-edit-panel" id="profileForm" hidden>
+                                <div class="eyebrow">Личные данные</div>
+                                <h2 class="profile-panel-title">Редактирование аккаунта</h2>
+                                <div class="mb-3"><label class="form-label" for="profileName">Имя</label><input
+                                        class="form-control" id="profileName" name="name" autocomplete="name" required>
+                                </div>
+                                <div class="mb-3"><label class="form-label" for="profileEmail">Электронная
+                                        почта</label><input class="form-control" id="profileEmail" name="email"
+                                        type="email" autocomplete="email" required></div>
+                                <div class="mb-3"><label class="form-label" for="profilePhone">Телефон</label><input
+                                        class="form-control" id="profilePhone" name="phone" type="tel"
+                                        autocomplete="tel" required></div>
+                                <div class="d-flex flex-wrap gap-2"><button class="btn btn-cta" type="submit">Сохранить
+                                        изменения</button><button class="btn btn-light profile-cancel-button"
+                                        id="cancelEditButton" type="button">Отмена</button></div>
+                                <p class="form-status" id="profileStatus" role="status" aria-live="polite"></p>
+                            </form>
+
+                            <section class="page-panel privacy-panel" aria-labelledby="privacyTitle">
+                                <div class="eyebrow">Контроль данных</div>
+                                <h2 class="profile-panel-title" id="privacyTitle">Настройки конфиденциальности</h2>
+                                <p class="profile-panel-description">Эти настройки применяются только на этом
+                                    устройстве. Мы никуда не отправляем данные из демо-сайта.</p>
+                                <form id="privacyForm">
+                                    <label class="privacy-option"><span><strong>Показывать телефон в
+                                                профиле</strong><small>Скрывайте номер, когда оставляете страницу
+                                                открытой.</small></span><input class="form-check-input" type="checkbox"
+                                            name="showPhone"></label>
+                                    <label class="privacy-option"><span><strong>Подставлять контакты в
+                                                заявку</strong><small>Имя и телефон заполнятся на странице
+                                                заказа.</small></span><input class="form-check-input" type="checkbox"
+                                            name="autoFill"></label>
+                                    <label class="privacy-option"><span><strong>Хранить историю
+                                                заявок</strong><small>Список заявок будет виден в вашем
+                                                профиле.</small></span><input class="form-check-input" type="checkbox"
+                                            name="saveHistory"></label>
+                                    <button class="btn btn-outline-primary mt-3" type="submit">Сохранить
+                                        настройки</button>
+                                    <p class="form-status" id="privacyStatus" role="status" aria-live="polite"></p>
+                                </form>
+                            </section>
+                        </div>
+                        <div class="col-lg-7">
+                            <section class="page-panel bookings-panel" aria-labelledby="bookingsTitle">
+                                <div class="d-flex flex-wrap align-items-end justify-content-between gap-3">
+                                    <div>
+                                        <div class="eyebrow">Ваши поездки</div>
+                                        <h2 class="profile-panel-title" id="bookingsTitle">История заявок</h2>
+                                    </div>
+                                    <a class="btn btn-cta" href="order.html">Подобрать круиз</a>
+                                </div>
+                                <div class="booking-list" id="bookingList"></div>
+                            </section>
+                            <div class="profile-note mt-4"><strong>Данные остаются у вас.</strong> Профиль и история
+                                хранятся в локальном браузере. Регистрация и пароль для этой демо-версии не нужны.</div>
                         </div>
                     </div>
-                    <div class="profile-account-actions">
-                        <button class="btn profile-edit-button" id="editProfileButton" type="button">Редактировать аккаунт</button>
-                        <button class="btn profile-logout-button" id="logoutButton" type="button">Выйти из аккаунта</button>
-                    </div>
-                </section>
-
-                <div class="row g-4 mt-1">
-                    <div class="col-lg-5">
-                        <form class="page-panel profile-form profile-edit-panel" id="profileForm" hidden>
-                            <div class="eyebrow">Личные данные</div>
-                            <h2 class="profile-panel-title">Редактирование аккаунта</h2>
-                            <div class="mb-3"><label class="form-label" for="profileName">Имя</label><input class="form-control" id="profileName" name="name" autocomplete="name" required></div>
-                            <div class="mb-3"><label class="form-label" for="profileEmail">Электронная почта</label><input class="form-control" id="profileEmail" name="email" type="email" autocomplete="email" required></div>
-                            <div class="mb-3"><label class="form-label" for="profilePhone">Телефон</label><input class="form-control" id="profilePhone" name="phone" type="tel" autocomplete="tel" required></div>
-                            <div class="d-flex flex-wrap gap-2"><button class="btn btn-cta" type="submit">Сохранить изменения</button><button class="btn btn-light profile-cancel-button" id="cancelEditButton" type="button">Отмена</button></div>
-                            <p class="form-status" id="profileStatus" role="status" aria-live="polite"></p>
-                        </form>
-
-                        <section class="page-panel privacy-panel" aria-labelledby="privacyTitle">
-                            <div class="eyebrow">Контроль данных</div>
-                            <h2 class="profile-panel-title" id="privacyTitle">Настройки конфиденциальности</h2>
-                            <p class="profile-panel-description">Эти настройки применяются только на этом устройстве. Мы никуда не отправляем данные из демо-сайта.</p>
-                            <form id="privacyForm">
-                                <label class="privacy-option"><span><strong>Показывать телефон в профиле</strong><small>Скрывайте номер, когда оставляете страницу открытой.</small></span><input class="form-check-input" type="checkbox" name="showPhone"></label>
-                                <label class="privacy-option"><span><strong>Подставлять контакты в заявку</strong><small>Имя и телефон заполнятся на странице заказа.</small></span><input class="form-check-input" type="checkbox" name="autoFill"></label>
-                                <label class="privacy-option"><span><strong>Хранить историю заявок</strong><small>Список заявок будет виден в вашем профиле.</small></span><input class="form-check-input" type="checkbox" name="saveHistory"></label>
-                                <button class="btn btn-outline-primary mt-3" type="submit">Сохранить настройки</button>
-                                <p class="form-status" id="privacyStatus" role="status" aria-live="polite"></p>
-                            </form>
-                        </section>
-                    </div>
-                    <div class="col-lg-7">
-                        <section class="page-panel bookings-panel" aria-labelledby="bookingsTitle">
-                            <div class="d-flex flex-wrap align-items-end justify-content-between gap-3">
-                                <div><div class="eyebrow">Ваши поездки</div><h2 class="profile-panel-title" id="bookingsTitle">История заявок</h2></div>
-                                <a class="btn btn-cta" href="order.html">Подобрать круиз</a>
-                            </div>
-                            <div class="booking-list" id="bookingList"></div>
-                        </section>
-                        <div class="profile-note mt-4"><strong>Данные остаются у вас.</strong> Профиль и история хранятся в локальном браузере. Регистрация и пароль для этой демо-версии не нужны.</div>
-                    </div>
                 </div>
+                <section class="page-panel profile-logged-out" id="loggedOutState" hidden>
+                    <div class="profile-logged-out-mark" aria-hidden="true">MSC</div>
+                    <div class="eyebrow">Сеанс завершён</div>
+                    <h2 class="profile-panel-title">Вы вышли из профиля</h2>
+                    <p class="profile-panel-description">Ваши данные остались в этом браузере. Вернитесь в кабинет в
+                        один клик — регистрация не требуется.</p>
+                    <button class="btn btn-cta" id="returnToProfileButton" type="button">Вернуться в профиль</button>
+                </section>
             </div>
-            <section class="page-panel profile-logged-out" id="loggedOutState" hidden>
-                <div class="profile-logged-out-mark" aria-hidden="true">MSC</div>
-                <div class="eyebrow">Сеанс завершён</div>
-                <h2 class="profile-panel-title">Вы вышли из профиля</h2>
-                <p class="profile-panel-description">Ваши данные остались в этом браузере. Вернитесь в кабинет в один клик — регистрация не требуется.</p>
-                <button class="btn btn-cta" id="returnToProfileButton" type="button">Вернуться в профиль</button>
-            </section>
-        </div>
-    </section>
-    <script>
-        (() => {
-            const defaults = { name: 'Kami R.R', phone: '0998170208', email: 'l.l.vi.britain@gmail.com' };
-            let profile = {};
-            try { profile = JSON.parse(localStorage.getItem('mscProfile') || '{}') || {}; } catch { profile = {}; }
-            profile = { name: profile.name || defaults.name, phone: profile.phone || defaults.phone, email: profile.email || defaults.email };
-            localStorage.setItem('mscProfile', JSON.stringify(profile));
-            let privacy = {};
-            try { privacy = JSON.parse(localStorage.getItem('mscPrivacy') || '{}') || {}; } catch { privacy = {}; }
-            privacy = { showPhone: privacy.showPhone !== false, autoFill: privacy.autoFill !== false, saveHistory: privacy.saveHistory !== false, ...privacy };
-            localStorage.setItem('mscPrivacy', JSON.stringify(privacy));
+        </section>
+        <script>
+            (() => {
+                const defaults = { name: 'Kami R.R', phone: '0998170208', email: 'l.l.vi.britain@gmail.com' };
+                let profile = {};
+                try { profile = JSON.parse(localStorage.getItem('mscProfile') || '{}') || {}; } catch { profile = {}; }
+                profile = { name: profile.name || defaults.name, phone: profile.phone || defaults.phone, email: profile.email || defaults.email };
+                localStorage.setItem('mscProfile', JSON.stringify(profile));
+                let privacy = {};
+                try { privacy = JSON.parse(localStorage.getItem('mscPrivacy') || '{}') || {}; } catch { privacy = {}; }
+                privacy = { showPhone: privacy.showPhone !== false, autoFill: privacy.autoFill !== false, saveHistory: privacy.saveHistory !== false, ...privacy };
+                localStorage.setItem('mscPrivacy', JSON.stringify(privacy));
 
-            const form = document.querySelector('#profileForm');
-            const dashboard = document.querySelector('#profileDashboard');
-            const loggedOut = document.querySelector('#loggedOutState');
-            const privacyForm = document.querySelector('#privacyForm');
-            const safeRead = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); } catch { return fallback; } };
+                const form = document.querySelector('#profileForm');
+                const dashboard = document.querySelector('#profileDashboard');
+                const loggedOut = document.querySelector('#loggedOutState');
+                const privacyForm = document.querySelector('#privacyForm');
+                const safeRead = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); } catch { return fallback; } };
 
-            function renderProfile() {
-                document.querySelector('#profileDisplayName').textContent = profile.name;
-                document.querySelector('#profileDisplayEmail').textContent = profile.email;
-                document.querySelector('#profileDisplayPhone').textContent = privacy.showPhone ? profile.phone : 'Телефон скрыт настройками';
-                const initials = profile.name.split(/\s+/).filter(Boolean).slice(0, 2).map(part => part[0]).join('').toUpperCase();
-                document.querySelector('#profileInitials').textContent = initials || 'MSC';
-                for (const [key, value] of Object.entries(profile)) { if (form.elements.namedItem(key)) form.elements.namedItem(key).value = value; }
-                for (const [key, value] of Object.entries(privacy)) { if (privacyForm.elements.namedItem(key)) privacyForm.elements.namedItem(key).checked = Boolean(value); }
-                const names = { mediterranean: 'Средиземное море', 'greek-islands': 'Греческие острова', caribbean: 'Карибские острова', other: 'Маршрут уточняется' };
-                const list = document.querySelector('#bookingList');
-                const bookings = privacy.saveHistory ? safeRead('mscBookings', []) : [];
-                list.replaceChildren();
-                if (!bookings.length) {
-                    const empty = document.createElement('div'); empty.className = 'empty-state'; empty.textContent = privacy.saveHistory ? 'Заявок пока нет. Выберите направление и оформите первую поездку.' : 'История заявок отключена в настройках конфиденциальности.'; list.append(empty); return;
+                function renderProfile() {
+                    document.querySelector('#profileDisplayName').textContent = profile.name;
+                    document.querySelector('#profileDisplayEmail').textContent = profile.email;
+                    document.querySelector('#profileDisplayPhone').textContent = privacy.showPhone ? profile.phone : 'Телефон скрыт настройками';
+                    const initials = profile.name.split(/\s+/).filter(Boolean).slice(0, 2).map(part => part[0]).join('').toUpperCase();
+                    document.querySelector('#profileInitials').textContent = initials || 'MSC';
+                    for (const [key, value] of Object.entries(profile)) { if (form.elements.namedItem(key)) form.elements.namedItem(key).value = value; }
+                    for (const [key, value] of Object.entries(privacy)) { if (privacyForm.elements.namedItem(key)) privacyForm.elements.namedItem(key).checked = Boolean(value); }
+                    const names = { mediterranean: 'Средиземное море', 'greek-islands': 'Греческие острова', caribbean: 'Карибские острова', other: 'Маршрут уточняется' };
+                    const list = document.querySelector('#bookingList');
+                    const bookings = privacy.saveHistory ? safeRead('mscBookings', []) : [];
+                    list.replaceChildren();
+                    if (!bookings.length) {
+                        const empty = document.createElement('div'); empty.className = 'empty-state'; empty.textContent = privacy.saveHistory ? 'Заявок пока нет. Выберите направление и оформите первую поездку.' : 'История заявок отключена в настройках конфиденциальности.'; list.append(empty); return;
+                    }
+                    bookings.forEach(item => {
+                        const article = document.createElement('article'); article.className = 'booking-record';
+                        const title = document.createElement('strong'); title.textContent = item.routeName || names[item.route] || 'Круиз MSC';
+                        const details = document.createElement('span'); details.textContent = [item.createdAt || 'Недавно', item.date ? `дата: ${item.date}` : '', item.guests || ''].filter(Boolean).join(' · ');
+                        article.append(title, details); list.append(article);
+                    });
                 }
-                bookings.forEach(item => {
-                    const article = document.createElement('article'); article.className = 'booking-record';
-                    const title = document.createElement('strong'); title.textContent = item.routeName || names[item.route] || 'Круиз MSC';
-                    const details = document.createElement('span'); details.textContent = [item.createdAt || 'Недавно', item.date ? `дата: ${item.date}` : '', item.guests || ''].filter(Boolean).join(' · ');
-                    article.append(title, details); list.append(article);
+
+                function setSession(isActive) {
+                    localStorage.setItem('mscProfileSession', isActive ? 'true' : 'false');
+                    dashboard.hidden = !isActive;
+                    loggedOut.hidden = isActive;
+                }
+
+                document.querySelector('#editProfileButton').addEventListener('click', () => { form.hidden = !form.hidden; if (!form.hidden) { form.elements.name.focus(); form.scrollIntoView({ behavior: 'smooth', block: 'center' }); } });
+                document.querySelector('#cancelEditButton').addEventListener('click', () => { form.hidden = true; document.querySelector('#profileStatus').textContent = ''; });
+                form.addEventListener('submit', event => {
+                    event.preventDefault(); profile = Object.fromEntries(new FormData(form).entries());
+                    localStorage.setItem('mscProfile', JSON.stringify(profile)); renderProfile();
+                    document.querySelector('#profileStatus').textContent = 'Изменения сохранены в этом браузере.';
+                    form.hidden = true;
                 });
-            }
-
-            function setSession(isActive) {
-                localStorage.setItem('mscProfileSession', isActive ? 'true' : 'false');
-                dashboard.hidden = !isActive;
-                loggedOut.hidden = isActive;
-            }
-
-            document.querySelector('#editProfileButton').addEventListener('click', () => { form.hidden = !form.hidden; if (!form.hidden) { form.elements.name.focus(); form.scrollIntoView({ behavior: 'smooth', block: 'center' }); } });
-            document.querySelector('#cancelEditButton').addEventListener('click', () => { form.hidden = true; document.querySelector('#profileStatus').textContent = ''; });
-            form.addEventListener('submit', event => {
-                event.preventDefault(); profile = Object.fromEntries(new FormData(form).entries());
-                localStorage.setItem('mscProfile', JSON.stringify(profile)); renderProfile();
-                document.querySelector('#profileStatus').textContent = 'Изменения сохранены в этом браузере.';
-                form.hidden = true;
-            });
-            privacyForm.addEventListener('submit', event => {
-                event.preventDefault(); privacy = Object.fromEntries(new FormData(privacyForm).entries());
-                for (const key of ['showPhone', 'autoFill', 'saveHistory']) privacy[key] = privacy[key] === 'on';
-                localStorage.setItem('mscPrivacy', JSON.stringify(privacy)); renderProfile();
-                document.querySelector('#privacyStatus').textContent = 'Настройки сохранены на этом устройстве.';
-            });
-            document.querySelector('#logoutButton').addEventListener('click', () => setSession(false));
-            document.querySelector('#returnToProfileButton').addEventListener('click', () => setSession(true));
-            renderProfile();
-            setSession(localStorage.getItem('mscProfileSession') !== 'false');
-        })();
-    </script>
-</main>
-<footer>
+                privacyForm.addEventListener('submit', event => {
+                    event.preventDefault(); privacy = Object.fromEntries(new FormData(privacyForm).entries());
+                    for (const key of ['showPhone', 'autoFill', 'saveHistory']) privacy[key] = privacy[key] === 'on';
+                    localStorage.setItem('mscPrivacy', JSON.stringify(privacy)); renderProfile();
+                    document.querySelector('#privacyStatus').textContent = 'Настройки сохранены на этом устройстве.';
+                });
+                document.querySelector('#logoutButton').addEventListener('click', () => setSession(false));
+                document.querySelector('#returnToProfileButton').addEventListener('click', () => setSession(true));
+                renderProfile();
+                setSession(localStorage.getItem('mscProfileSession') !== 'false');
+            })();
+        </script>
+    </main>
+    <footer>
         <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3"><a
                 class="navbar-brand" href="index.html" aria-label="MSC — на главную"><img class="brand-logo"
                     src="logo.png" alt="Логотип MSC"
